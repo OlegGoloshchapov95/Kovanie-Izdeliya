@@ -1,0 +1,160 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	font-family:"Helvetica", sans-serif;
+	line-height:1.2; 
+} 
+.main-wrapper{
+  max-width:100%; 
+} 
+.container{
+  max-width:960px; 
+  padding:0 10px;
+}
+.header-block .logo-kovka{
+	padding-top:5px; 
+}
+.header-block .logo-kovka .coloured-logo{
+	width:70px;
+}
+.header-block{
+	background-color:#3e2424; 
+} 
+.header-block .navbar-my{
+	background-color:#111010; 
+}
+.header-block .navbar-my .my-nav-b-right>li>a{
+	color:#fff; 
+}
+.main-block{
+	display:block;
+}
+.main-block .big-logo{
+	display:block;
+	width:60%;  
+	margin-right:auto;
+	margin-left:auto; 
+	margin-bottom:10px;
+}
+.main-block .main-heading{
+	font-size:30px;
+	text-align:center; 
+	color:#8e960b; 
+	margin-bottom:20px;
+}
+.h-decoration:after{
+  content:'';
+  display:block; 	
+  background-image:url(../img/h1-decoration-long.svg);
+  background-repeat:no-repeat;
+  height:30px; 
+  background-size:contain;
+  width:200px;
+  margin:0 auto;
+}
+.main-block .top-descr{
+	margin-bottom:20px;
+	color:#4c0414; 
+}
+.main-block .tracery{
+	background-image:url('../img/trasery.svg');
+	background-repeat:repeat-x;
+	height:20px;
+	background-size:contain;  
+}
+.three-d-table,.about-me,.aur-works, .how-to-contact, .footer-block{
+    padding-top:20px;
+	padding-bottom:20px;
+}
+.main-block .about-me{
+	background-color:#3e2424;
+}
+.about-me p{
+	margin-bottom:10px;
+	color:#bcb2a1; 
+}
+.h-in-section{
+	text-align:center; 
+	font-size:30px;
+	color:#b97203; 
+	margin-bottom:20px;
+}
+
+.three-d-table{
+	background-color:#3e2424;
+}
+
+.three-d-table .video-table{
+	display:block; 
+	margin:0 auto;
+	width:80%; 
+}
+.how-to-contact p{
+	margin-bottom:10px;
+	color: #4c0414;
+}
+.footer-block{
+	background-color:#3e2424;
+	text-align:center; 
+}
+.footer-block .my-nav-b-footer li{
+	display:inline-block; 
+	vertical-align:middle;
+	margin-left:10px;
+	margin-right:10px;
+}
+.footer-block .my-nav-b-footer a{
+	color:#fff;
+	text-decoration:none; 
+}
+.footer-block .my-nav-b-footer a:hover{
+	text-decoration:underline; 
+}
+.footer-block .logo-kovka{
+	display:block; 
+	margin-bottom:12px;
+}
+.footer-block .logo-kovka .logo-in-footer{
+	width:100px; 
+}
