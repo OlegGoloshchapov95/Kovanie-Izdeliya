@@ -1,168 +1,230 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-body{
-	font-family:"Helvetica", sans-serif;
-	line-height:1.2; 
-} 
-.main-wrapper{
-  overflow:hidden;
-} 
-.container{
-  max-width:960px; 
-  padding:0 10px;
+
+body {
+    font-family: "Helvetica", sans-serif;
+    line-height: 1.2;
 }
-.header-block .logo-kovka{
-	padding-top:5px; 
+
+.main-wrapper {
+    overflow: hidden;
 }
-.header-block .logo-kovka .coloured-logo{
-	width:70px;
+
+.container {
+    max-width: 960px;
+    padding: 0 10px;
 }
-.header-block{
-	background-color:#3e2424; 
-} 
-.header-block .navbar-my{
-	background-color:#111010; 
+
+.header-block .logo-kovka {
+    padding-top: 5px;
 }
-.header-block .navbar-my .my-nav-b-right>li>a{
-	color:#fff; 
+
+.header-block .logo-kovka .coloured-logo {
+    width: 70px;
 }
-.header-block .navbar-my .my-nav-b-right>li>a:hover{
-	color:#b7b7b0; 
+
+.header-block {
+    background-color: #3e2424;
 }
-.main-block{
-	display:block;
+
+.header-block .navbar-my {
+    background-color: #111010;
 }
-.main-block .big-logo{
-	display:block;
-	width:60%;  
-	margin-right:auto;
-	margin-left:auto; 
-	margin-bottom:10px;
+
+.header-block .navbar-my .my-nav-b-right > li > a {
+    color: #fff;
 }
-.main-block .main-heading{
-	font-size:30px;
-	text-align:center; 
-	color:#8e960b; 
-	margin-bottom:20px;
+
+.header-block .navbar-my .my-nav-b-right > li > a:hover {
+    color: #b7b7b0;
 }
-.h-decoration:after{
-  content:'';
-  display:block; 	
-  background-image:url(../img/h1-decoration-long.svg);
-  background-repeat:no-repeat;
-  height:30px; 
-  background-size:contain;
-  width:200px;
-  margin:0 auto;
+
+.main-block {
+    display: block;
 }
-.main-block .top-descr{
-	margin-bottom:20px;
-	color:#4c0414; 
+
+.main-block .big-logo {
+    display: block;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
 }
-.main-block .tracery{
-	background-image:url('../img/trasery.svg');
-	background-repeat:repeat-x;
-	height:20px;
-	background-size:contain;  
+
+.main-block .main-heading {
+    font-size: 30px;
+    text-align: center;
+    color: #8e960b;
+    margin-bottom: 20px;
 }
-.three-d-table,.about-me,.aur-works, .how-to-contact, .footer-block{
-    padding-top:20px;
-	padding-bottom:20px;
+
+.h-decoration:after {
+    content: '';
+    display: block;
+    background-image: url(../img/h1-decoration-long.svg);
+    background-repeat: no-repeat;
+    height: 30px;
+    background-size: contain;
+    width: 200px;
+    margin: 0 auto;
 }
-.main-block .about-me{
-	background-color:#3e2424;
+
+.main-block .top-descr {
+    margin-bottom: 20px;
+    color: #4c0414;
 }
-.about-me p{
-	margin-bottom:10px;
-	color:#bcb2a1; 
+
+.main-block .tracery {
+    background-image: url('../img/trasery.svg');
+    background-repeat: repeat-x;
+    height: 20px;
+    background-size: contain;
 }
-.h-in-section{
-	text-align:center; 
-	font-size:30px;
-	color:#b97203; 
-	margin-bottom:20px;
+
+.three-d-table, .about-me, .aur-works, .how-to-contact, .footer-block {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.aur-works .gallery-section{
-	margin-bottom:30px;
-	text-align:center;
+
+.main-block .about-me {
+    background-color: #3e2424;
 }
-.aur-works .gallery-section h5{
-	font-size:20px;
-	color:#a2ab11;
-	margin-bottom:10px;
+
+.about-me p {
+    margin-bottom: 10px;
+    color: #bcb2a1;
 }
-.three-d-table{
-	background-color:#3e2424;
+
+.h-in-section {
+    text-align: center;
+    font-size: 30px;
+    color: #b97203;
+    margin-bottom: 20px;
 }
-.aur-works .gallery-section a{
-	display:inline-block;
-	margin-bottom:5px;
+
+.aur-works .gallery-section {
+    margin-bottom: 30px;
+    text-align: center;
 }
-.aur-works .gallery-section a:hover{
-	display:inline-block;
-	border:2px solid yellow;
+
+.aur-works .gallery-section h5 {
+    font-size: 20px;
+    color: #a2ab11;
+    margin-bottom: 10px;
 }
-.three-d-table .video-table{
-	display:block; 
-	margin:0 auto;
-	width:80%; 
+
+.three-d-table {
+    background-color: #3e2424;
 }
-.how-to-contact p{
-	margin-bottom:10px;
-	color: #4c0414;
+
+.aur-works .gallery-section a {
+    display: inline-block;
+    margin-bottom: 5px;
 }
-.footer-block{
-	background-color:#3e2424;
-	text-align:center; 
+
+.aur-works .gallery-section a:hover {
+    display: inline-block;
+    border: 2px solid yellow;
 }
-.footer-block .my-nav-b-footer li{
-	display:inline-block; 
-	vertical-align:middle;
-	margin-left:10px;
-	margin-right:10px;
+
+.three-d-table .video-table {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
 }
-.footer-block .my-nav-b-footer a{
-	color:#fff;
-	text-decoration:none; 
+
+.how-to-contact p {
+    margin-bottom: 10px;
+    color: #4c0414;
 }
-.footer-block .my-nav-b-footer a:hover{
-	text-decoration:underline; 
+
+.footer-block {
+    background-color: #3e2424;
+    text-align: center;
 }
-.footer-block .logo-kovka{
-	display:block; 
-	margin-bottom:12px;
+
+.footer-block .my-nav-b-footer li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.footer-block .logo-kovka .logo-in-footer{
-	width:100px; 
+
+.footer-block .my-nav-b-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-block .my-nav-b-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-block .logo-kovka {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-block .logo-kovka .logo-in-footer {
+    width: 100px;
+}
+
+.form-item {
+    margin-bottom:30px;
+}
+
+input {
+    width:100%;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #5e5151;
+    border: none;
+    font-size: 16px;
+    padding: 18px 20px;
+    color: white;
+}
+
+input::placeholder {
+    color: #e8b6b6;
+}
+
+input:active,
+input:focus {
+    color: #e8b6b6;
 }
