@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Художественная ковка. Харьков. Заказать.</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wraper" class="main-wrapper">
+    <header id="header" class="header-block">
+        <nav class="navbar navbar-default navbar-my">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo-kovka" href="#"><img class="coloured-logo"
+                                                                     src="img/light-coloured-logo.svg" alt="Ковка лого"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right my-nav-b-right">
+                        <li><a href="index.html">Вернуться на лендинг</a></li>
+                        <li><a href="#">Регистрация</a></li>
+                        <li><a href="#">Вход</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-block">
+        <div class="container">
+            <h1 class="main-heading h-decoration">Регистрация</h1>
+            <p class="top-descr">Текст регистрации.
+            </p>
+        </div>
+    </main>
+    <footer id="footer" class="footer-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a id="logo-with-event" class="logo-kovka" href="#"><img class="logo-in-footer"
+                                                                             src="img/light-coloured-logo.svg"
+                                                                             alt="Ковка лого"></a>
+                </div>
+                <div class="col-sm-9">
+                    <ul class="my-nav-b-footer">
+                        <li><a href="#about-me">О нас</a></li>
+                        <li><a href="#my-projects">Наши работы</a></li>
+                        <li><a href="#table-animation">3d-Стол - Анимация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<!-- 1. Add lates fancyBox files -->
+<script src="js/jquery.fancybox.min.js"></script>
+<script>
+    var logo = $('#logo-with-event')
+    logo.click(function (event) {
+        event.preventDefault();
+        alert("logo has been clicked");
+    });
+</script>
+</body>
+</html>
