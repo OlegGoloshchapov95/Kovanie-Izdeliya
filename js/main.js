@@ -14,8 +14,12 @@ $(document).ready(function () {
                 "password": $data.password
             },
             function (data, status) {
-                alert("Данные: " + data + "\nСостояние: " + status);
+                alert("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
             });
+        /*
+           Данные: {"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzEsImlhdCI6MTY4NTQ3MDU3MywiZXhwIjoxNjg4MDYyNTczfQ.BcL2hdNLVgaIOtdGt-SLnVe5xMHIyCum-w8gvYp27UM","user":{"id":31,"username":"NaN","email":"oleggol95@gmail.com","provider":"local","confirmed":true,"blocked":false,"createdAt":"2023-05-30T18:16:13.358Z","updatedAt":"2023-05-30T18:16:13.358Z"}}
+           Состояние: success
+         */
     })
 }); 
 
