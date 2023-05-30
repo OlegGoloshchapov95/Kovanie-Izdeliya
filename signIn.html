@@ -11,6 +11,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
@@ -43,17 +49,14 @@
     <main class="main-block">
         <div class="container">
             <h1 class="main-heading h-decoration">Регистрация</h1>
-            <form class="auth-form" id="myForm">
+            <form class="auth-form">
                 <div class="form-item">
-                    <input type="text" id="user-name" name="user-name" placeholder="user name">
-                </div>
-                <div class="form-item">
-                    <input type="text" id="email" name="email" placeholder="email">
+                    <input type="text" id="user-name-or-email" name="user-name-or-email" placeholder="user name or email">
                 </div>
                 <div class="form-item">
                     <input type="text" id="password" name="password" placeholder="password">
                 </div>
-                <button type="submit" class="submit-button" id="submit-button-registration">
+                <button type="submit" class="submit-button">
                     Отправить
                 </button>
             </form>
@@ -83,7 +86,13 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <!-- 1. Add lates fancyBox files -->
-<script src="js/jquery.fancybox.min.js"></script>>
-<script src="js/main.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script>
+    var logo = $('#logo-with-event')
+    logo.click(function (event) {
+        event.preventDefault();
+        alert("logo has been clicked");
+    });
+</script>
 </body>
 </html>

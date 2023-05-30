@@ -228,3 +228,15 @@ input:active,
 input:focus {
     color: #e8b6b6;
 }
+
+.submit-button {
+    display:inline-block;
+    padding:10px 20px;
+    background-color:#e2da26;
+    color:#000;
+    border-radius:5px;
+}
+
+.auth-form {
+    margin-bottom:30px;
+}
