@@ -6,6 +6,8 @@ $(document).ready(function(){
             $data[this.name] = $(this).val();
         });
         alert("function works")
+        console.log("$data")
+        console.log($data)
     })
 }); 
 
