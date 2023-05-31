@@ -79,6 +79,24 @@ $(document).ready(function () {
            Состояние: success
          */
     })
+
+    var $messagesBlock = $("#messagesBlockWrapper");
+    if($messagesBlock.is("#messagesBlockWrapper")){
+        $.ajax({
+            type: 'GET',
+            url: "http://localhost:1337/api/messages",
+            headers: {
+                "authorization": $token,
+            }
+            //OR
+            //beforeSend: function(xhr) {
+            //  xhr.setRequestHeader("My-First-Header", "first value");
+            //  xhr.setRequestHeader("My-Second-Header", "second value");
+            //}
+        }).done(function (data) {
+            alert(data);
+        });
+    }
 }); 
 
 
