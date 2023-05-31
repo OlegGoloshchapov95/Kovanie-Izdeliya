@@ -17,10 +17,10 @@ $(document).ready(function () {
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
                 alert("data.jwt")
                 alert(data.jwt)
-                localStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
+                sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 alert("$data.userName")
                 alert($data.userName)
-                localStorage.setItem("userNameForKovka", $data.userName);
+                sessionStorage.setItem("userNameForKovka", $data.userName);
                 location.href = "authorizedUser.html";
             });
         /*
@@ -32,8 +32,8 @@ $(document).ready(function () {
     $('#submit-button-message').on("click", function (e) {
         e.preventDefault();
         var $data = {};
-        var $token = localStorage.getItem("bearerTokenForUser")
-        var $user = localStorage.getItem("userNameForKovka")
+        var $token = sessionStorage.getItem("bearerTokenForUser")
+        var $user = sessionStorage.getItem("userNameForKovka")
         alert("$token")
         alert($token)
         alert("$user")
@@ -47,8 +47,10 @@ $(document).ready(function () {
             type: 'POST',
             url: "http://localhost:1337/api/messages",
             data: {
-                "textOfMessage": $data.textOfMessage,
-                "user": $user
+                data: {
+                    "textOfMessage": $data.textOfMessage,
+                    "user": $user
+                }
             },
             headers: {
                 "authorization": $token,
