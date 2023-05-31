@@ -9,14 +9,18 @@ $(document).ready(function () {
         console.log($data);
         $.post("http://localhost:1337/api/auth/local/register",
             {
-                "username": $data.user - name,
+                "username": $data.userName,
                 "email": $data.email,
                 "password": $data.password
             },
             function (data, status) {
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
+                alert("data.jwt")
+                alert(data.jwt)
                 localStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
-                localStorage.setItem("userNameForKovka", `Bearer ${data.user - name}`);
+                alert("$data.userName")
+                alert($data.userName)
+                localStorage.setItem("userNameForKovka", $data.userName);
                 location.href = "authorizedUser.html";
             });
         /*
@@ -28,8 +32,12 @@ $(document).ready(function () {
     $('#submit-button-message').on("click", function (e) {
         e.preventDefault();
         var $data = {};
-        var token = localStorage.getItem("bearerTokenForUser")
-        var user = localStorage.getItem("userNameForKovka")
+        var $token = localStorage.getItem("bearerTokenForUser")
+        var $user = localStorage.getItem("userNameForKovka")
+        alert("$token")
+        alert($token)
+        alert("$user")
+        alert($user)
         $('#myMessageForm').find('input, textearea, select').each(function () {
             $data[this.name] = $(this).val();
         });
@@ -40,10 +48,10 @@ $(document).ready(function () {
             url: "http://localhost:1337/api/messages",
             data: {
                 "textOfMessage": $data.textOfMessage,
-                "user": user
+                "user": $user
             },
             headers: {
-                "authorization": token,
+                "authorization": $token,
             }
             //OR
             //beforeSend: function(xhr) {
