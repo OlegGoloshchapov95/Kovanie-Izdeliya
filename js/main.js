@@ -24,6 +24,7 @@ $(document).ready(function () {
            Состояние: success
          */
     })
+
     $('#submit-button-message').on("click", function (e) {
         e.preventDefault();
         var $data = {};
