@@ -62,8 +62,13 @@ $(document).ready(function () {
             //}
         }).done(function (data) {
             data.data.forEach(function (item, index) {
+                var $myDiv = $('<div>').attr({'class':'messageItem'});
+                $myDiv.html(`<span class="user">${item.attributes.user}</span><p class="messageText">${item.attributes.textOfMessage}</p>`)
+                $messagesBlock.append($myDiv)
+                /*
                 alert(JSON.stringify(item.attributes.textOfMessage));
                 alert(JSON.stringify(item.attributes.user));
+                 */
             })
         });
     }
