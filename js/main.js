@@ -42,7 +42,12 @@ $(document).ready(function () {
                 "authorization": $token,
             }
         }).done(function (data) {
-            alert(data);
+            var $messagesBlock = $("#messagesBlockWrapper");
+            if($messagesBlock.is("#messagesBlockWrapper")) {
+                var $myDiv = $('<div>').attr({'class': 'messageItem'});
+                $myDiv.html(`<span class="user">${$user}</span><p class="messageText">${$data.textOfMessage}</p>`)
+                $messagesBlock.append($myDiv)
+            }
         });
     })
 
@@ -65,10 +70,6 @@ $(document).ready(function () {
                 var $myDiv = $('<div>').attr({'class':'messageItem'});
                 $myDiv.html(`<span class="user">${item.attributes.user}</span><p class="messageText">${item.attributes.textOfMessage}</p>`)
                 $messagesBlock.append($myDiv)
-                /*
-                alert(JSON.stringify(item.attributes.textOfMessage));
-                alert(JSON.stringify(item.attributes.user));
-                 */
             })
         });
     }
