@@ -61,7 +61,10 @@ $(document).ready(function () {
             //  xhr.setRequestHeader("My-Second-Header", "second value");
             //}
         }).done(function (data) {
-            alert(data);
+            data.data.forEach(function (item, index) {
+                alert(JSON.stringify(item.attributes.textOfMessage));
+                alert(JSON.stringify(item.attributes.user));
+            })
         });
     }
 }); 
