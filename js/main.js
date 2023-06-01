@@ -72,6 +72,16 @@ $(document).ready(function () {
         });
     })
 
+    var $logoutBtn = $("#logOut-button");
+    if($logoutBtn.is("#logOut-button")) {
+        $logoutBtn.on("click", function (e) {
+            e.preventDefault();
+            sessionStorage.removeItem("bearerTokenForUser");
+            sessionStorage.removeItem("userNameForKovka");
+            location.href = "index.html";
+        })
+    }
+
     var $messagesBlock = $("#messagesBlockWrapper");
     if($messagesBlock.is("#messagesBlockWrapper")){
         var $token = sessionStorage.getItem("bearerTokenForUser")
