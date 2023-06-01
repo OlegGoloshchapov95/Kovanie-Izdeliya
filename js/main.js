@@ -37,9 +37,6 @@ $(document).ready(function () {
                     "textOfMessage": $data.textOfMessage,
                     "user": $user
                 }
-            },
-            headers: {
-                "authorization": $token,
             }
         }).done(function (data) {
             var $messagesBlock = $("#messagesBlockWrapper");
