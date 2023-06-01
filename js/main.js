@@ -21,6 +21,27 @@ $(document).ready(function () {
             });
     })
 
+    $('#submit-button-signIn').on("click", function (e) {
+        e.preventDefault();
+        var $data = {};
+        $('#myFormSignIn').find('input, textearea, select').each(function () {
+            $data[this.name] = $(this).val();
+        });
+        console.log("$data");
+        console.log($data);
+        $.post("http://localhost:1337/api/auth/local",
+            {
+                "identifier": $data.userName,
+                "password": $data.password
+            },
+            function (data, status) {
+                console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
+                sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
+                sessionStorage.setItem("userNameForKovka", $data.userName);
+                location.href = "authorizedUser.html";
+            });
+    })
+
     $('#submit-button-message').on("click", function (e) {
         e.preventDefault();
         var $data = {};
