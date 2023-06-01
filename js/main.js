@@ -53,6 +53,9 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: "http://localhost:1337/api/messages",
+            headers: {
+                "authorization": $token,
+            },
             data: {
                 data: {
                     "textOfMessage": $data.textOfMessage,
