@@ -7,19 +7,26 @@ $(document).ready(function () {
         });
         console.log("$data");
         console.log($data);
-        $.post("http://localhost:1337/api/auth/local/register",
-            {
+        jQuery.ajax({
+            type: "POST",
+            url: "http://localhost:1337/api/auth/local/register",
+            data: {
                 "username": $data.userName,
                 "email": $data.email,
                 "password": $data.password
             },
-            function (data, status) {
+            error: function(data){
+                alert("error")
+                alert(JSON.stringify(data))
+            },
+            success: function(data, status){
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
                 sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 sessionStorage.setItem("userNameForKovka", $data.userName);
                 location.href = "authorizedUser.html";
-            });
-    })
+            }
+        });
+    });
 
     $('#submit-button-signIn').on("click", function (e) {
         e.preventDefault();
