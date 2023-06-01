@@ -15,9 +15,10 @@ $(document).ready(function () {
                 "email": $data.email,
                 "password": $data.password
             },
-            error: function(data){
-                alert("error")
-                alert(JSON.stringify(data))
+            error: function(xhr, status, message){
+                console.log(JSON.parse(xhr.responseText).error.message);
+                alert(message)
+                //$("authentication-page-error-block").
             },
             success: function(data, status){
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
