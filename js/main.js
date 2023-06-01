@@ -16,14 +16,14 @@ $(document).ready(function () {
                 "password": $data.password
             },
             error: function(xhr, status, message){
-                console.log(JSON.parse(xhr.responseText).error.message);
-                alert(message)
-                //$("authentication-page-error-block").
+                var errorMessage = JSON.parse(xhr.responseText).error.message? JSON.parse(xhr.responseText).error.message : message
+                $("#authentication-page-error-block").html("<p>" + errorMessage + "</p>")
             },
             success: function(data, status){
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
                 sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 sessionStorage.setItem("userNameForKovka", $data.userName);
+                $("#authentication-page-error-block").html("<p></p>");
                 location.href = "authorizedUser.html";
             }
         });
@@ -37,17 +37,25 @@ $(document).ready(function () {
         });
         console.log("$data");
         console.log($data);
-        $.post("http://localhost:1337/api/auth/local",
-            {
+        jQuery.ajax({
+            type: "POST",
+            url: "http://localhost:1337/api/auth/local",
+            data: {
                 "identifier": $data.userName,
                 "password": $data.password
             },
-            function (data, status) {
+            error: function(xhr, status, message){
+                var errorMessage = JSON.parse(xhr.responseText).error.message? JSON.parse(xhr.responseText).error.message : message
+                $("#authentication-page-error-block").html("<p>" + errorMessage + "</p>")
+            },
+            success: function(data, status){
                 console.log("Данные: " + JSON.stringify(data) + "\nСостояние: " + status);
                 sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 sessionStorage.setItem("userNameForKovka", $data.userName);
+                $("#authentication-page-error-block").html("<p></p>");
                 location.href = "authorizedUser.html";
-            });
+            }
+        });
     })
 
     $('#submit-button-message').on("click", function (e) {

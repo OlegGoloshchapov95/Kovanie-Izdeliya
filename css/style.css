@@ -260,3 +260,7 @@ input:focus {
     margin-bottom:0;
 }
 
+#authentication-page-error-block {
+    color:red;
+}
+
