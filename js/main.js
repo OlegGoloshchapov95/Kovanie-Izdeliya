@@ -79,10 +79,15 @@ $(document).ready(function () {
                 }
             }
         }).done(function (data) {
+            console.log(data);
             var $messagesBlock = $("#messagesBlockWrapper");
             if($messagesBlock.is("#messagesBlockWrapper")) {
-                var $myDiv = $('<div>').attr({'class': 'messageItem'});
+                var $myDiv = $('<div>').attr({'class': 'messageItem'}).attr({'data-id':data.data.id});
                 $myDiv.html(`<span class="user">${$user}</span><p class="messageText">${$data.textOfMessage}</p>`)
+                var $user = sessionStorage.getItem("userNameForKovka")
+                if($user=="Admin") {
+                    $myDiv.append("<div class='deleteMessageBlock'></div>")
+                }
                 $messagesBlock.append($myDiv)
             }
         });
@@ -114,8 +119,12 @@ $(document).ready(function () {
             //}
         }).done(function (data) {
             data.data.forEach(function (item, index) {
-                var $myDiv = $('<div>').attr({'class':'messageItem'});
+                var $myDiv = $('<div>').attr({'class':'messageItem'}).attr({'data-id':item.id});
                 $myDiv.html(`<span class="user">${item.attributes.user}</span><p class="messageText">${item.attributes.textOfMessage}</p>`)
+                var $user = sessionStorage.getItem("userNameForKovka")
+                if($user=="Admin") {
+                    $myDiv.append("<div class='deleteMessageBlock'></div>")
+                }
                 $messagesBlock.append($myDiv)
             })
         });
