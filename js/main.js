@@ -130,6 +130,20 @@ $(document).ready(function () {
         });
     }
 
+    $(document).on("click", ".deleteMessageBlock", function(event){
+        var $messageItem = $(this).closest(".messageItem");
+        var $itemId = $messageItem.attr("data-id")
+        $.ajax({
+            type: 'DELETE',
+            url: `http://localhost:1337/api/messages/${$itemId}`,
+            headers: {
+                "authorization": $token,
+            }
+        }).done(function (data) {
+            $messageItem.remove();
+        });
+    });
+
     var $countdownBlock = $("#countdown");
     if ($countdownBlock.is("#countdown")) {
         var end = new Date('06/19/2023 10:1 AM');
