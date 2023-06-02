@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Художественная ковка. Харьков. Заказать.</title>
+    <title>Художня ковка - Харків</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,11 +38,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right my-nav-b-right">
-                        <li><a href="#about-me">О нас</a></li>
-                        <li><a href="#my-projects">Наши работы</a></li>
-                        <li><a href="#table-animation">3d-Стол - Анимация</a></li>
-                        <li><a href="#how-to-contact-me">Как связаться</a></li>
-                        <li><a href="index.html" id="logOut-button">Разлогиниться</a></li>
+                        <li><a href="#about-me">Про компанію</a></li>
+                        <li><a href="#my-projects">Наші роботи</a></li>
+                        <li><a href="#table-animation">3d-Стіл - Анімація</a></li>
+                        <li><a href="#how-to-contact-me">Контакти</a></li>
+                        <li><a href="index.html" id="logOut-button">Вихід</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,40 +50,43 @@
     </header>
     <main class="main-block">
         <div class="container">
-            <h1 class="main-heading h-decoration">Кованые изделия не дорого!</h1>
-            <p class="top-descr">Если Вам нужно сделать заказ кованого изделия или художественной ковки, то Вы можете
-                обратиться к нам, что бы заказать кованое изделие под ключ не дорого. Ниже Вы можете найти более
-                подробную информацию о нас, контакты и примеры работ.
-            </p>
+            <h1 class="main-heading h-decoration">ХУДОЖНІЙ КОВАЛЬ № 1 В УКРАЇНІ</h1>
+            <div class="promotionBlock">
+                <span>Знижка 20% на будь-яке замовлення з каталогу!!! Акція завершується через: </span>
+                <span id="countdown"></span>
+            </div>
+            <!-- <p class="top-descr">
+                Якщо Вам потрібно зробити замовлення кованого виробу або художнього кування, то Ви можете
+                звернутися до нас, щоб замовити кований виріб під ключ і не дорого. Нижче Ви можете знайти більш
+                детальну інформацію про нас, контакти та приклади робіт.
+            </p> -->
             <img class="big-logo" src="img/dark-logo.svg" alt="Тёмное лого">
             <div class="tracery"></div>
         </div>
         <section id="about-me" class="about-me">
             <div class="container">
-                <h4 class="h-in-section h-decoration">О нас</h4>
+                <h4 class="h-in-section h-decoration">Про компанію</h4>
                 <p>
-                    Меня зовут Сергей. Я занимаюсь сваркой и изготовлением кованых изделий с XXXX года. Я люблю свою
-                    работу и являюсь мастером соего дела. Я изготовляю разные кованые изделия(ворота, подаставки,
-                    качали, столы, стулья и т.д.). За свою жизнь я изготовил около ХХ кованых изделий...
+                    Компанія була заснована в 2020 році Сергієм Кулебою. На момент створення Сергій вже займаюся зварюванням та виготовленням кованих виробів з 2001 року і за 22 роки дійсно став майстром цієї справи. На данний момент наша команда складається з 3 ковалів, які відповідають за замовлення різної складності. Ми виготовляємо різні ковані вироби (ворота, поставки, гойдалки, столи, стільці і т.д.).
                 </p>
                 <p>
-                    Выполняю заказы не дорого и быстро...
+                    Замовлення виконуються в залежності від складності та кількості замовлень в термін від 3 до 30 днів.
                 </p>
                 <p>
-                    Что бы проконсультироваться, обсудить цены, сделать заказ, Вы можете связаться со мной по телефону
-                    или написать на почту. Примеры работ и контактная информация для связи со мной расположены ниже.
+                    Щоб проконсультуватися, обговорити ціни, зробити замовлення, Ви можете зв'язатися з нами за телефоном
+                    або написати на пошту. Приклади робіт та контактна інформація для зв'язку розташовані нижче.
                 </p>
             </div>
         </section>
         <section id="comments" class="comments">
             <div class="container">
-                <h4 class="h-in-section h-decoration">Комментарии</h4>
+                <h4 class="h-in-section h-decoration">Відгуки</h4>
                 <form class="message-form" id="myMessageForm">
                     <div class="form-item">
                         <input type="text" id="textOfMessage" name="textOfMessage" placeholder="text of message">
                     </div>
                     <button class="submit-button" id="submit-button-message">
-                        Отправить
+                        Надіслати
                     </button>
                 </form>
                 <div id="messagesBlockWrapper">
@@ -92,10 +95,10 @@
         </section>
         <section id="my-projects" class="aur-works">
             <div class="container">
-                <h4 class="h-in-section h-decoration">Наши работы</h4>
+                <h4 class="h-in-section h-decoration">Наші роботи</h4>
                 <div class="gallary">
                     <section class="gallery-section">
-                        <h5>Кованая беседка, кованая качель.</h5>
+                        <h5>Кована бесідка, кована гойдалка.</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/besedka1.jpg"><img
                                 src="gallary_img/projectsSmall/besedka1small.jpg" width="150" height="100"
                                 alt="Беседка 1"/></a>
@@ -104,7 +107,7 @@
                                 alt="Качель 1"/></a>
                     </section>
                     <section class="gallery-section">
-                        <h5>Кованая мебель.</h5>
+                        <h5>Ковані меблі</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/mebel1.jpg"><img
                                 src="gallary_img/projectsSmall/mebel1Small.jpg" width="150" height="100"
                                 alt="Мебель 1"/></a>
@@ -128,13 +131,13 @@
                                 alt="Мебель 7"/></a>
                     </section>
                     <section class="gallery-section">
-                        <h5>Кованые перила.</h5>
+                        <h5>Ковані перила</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/perila1.jpg"><img
                                 src="gallary_img/projectsSmall/perila1Small.jpg" width="150" height="100"
                                 alt="Перила 1"/></a>
                     </section>
                     <section class="gallery-section">
-                        <h5>Кованые подставки под бутылки и под аквариум.</h5>
+                        <h5>Ковані підставки під пляшки та під акваріум</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/podstavka1.jpg"><img
                                 src="gallary_img/projectsSmall/podstavka1Small.jpg" width="150" height="100"
                                 alt="Подставка 1"/></a>
@@ -143,7 +146,7 @@
                                 alt="Подставка под аквариум 1"/></a>
                     </section>
                     <section class="gallery-section">
-                        <h5>Кованая решётка, кованый сундук.</h5>
+                        <h5>Кована решітка, кований сундук</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/reshotka1.jpg"><img
                                 src="gallary_img/projectsSmall/reshotka1Small.jpg" width="150" height="100"
                                 alt="Решётка 1"/></a>
@@ -152,7 +155,7 @@
                                 alt="Сундук 1"/></a>
                     </section>
                     <section class="gallery-section">
-                        <h5>Кованые ворота.</h5>
+                        <h5>Ковані ворота</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/vorota1.jpg"><img
                                 src="gallary_img/projectsSmall/vorota1Small.jpg" width="150" height="100"
                                 alt="Ворота 1"/></a>
@@ -168,7 +171,7 @@
         </section>
         <section id="table-animation" class="three-d-table">
             <div class="container">
-                <h4 class="h-in-section h-decoration">3d-Стол - Анимация</h4>
+                <h4 class="h-in-section h-decoration">3d-Стіл - Анімація</h4>
                 <video class="video-table" autoplay="autoplay" loop="loop" poster="videos/bck.jpg">
                     <source src="videos/table.mp4" type="video/mp4">
                     <source src="videos/table.webm" type="video/webm">
@@ -177,13 +180,14 @@
         </section>
         <section id="how-to-contact-me" class="how-to-contact">
             <div class="container">
-                <h4 class="h-in-section h-decoration">Как связаться</h4>
-                <p>Номер телефона: XXX-XXX-XX-XX;</p>
-                <p>Почтовый адрес: XXXXXX@gmail.com</p>
-                <p>Что бы проконсультироваться, обсудить цены, сделать заказ, Вы можете связаться со мной по телефону
-                    или написать на почту. Звонки принимаются в любой день с ХХ:XX до ХХ:XX.</p>
+                <h4 class="h-in-section h-decoration">Як зв'язатися?</h4>
+                <p>Номер телефону: +38(099)799-06-79;</p>
+                <p>Поштова адреса: art_kovka_kharkiv@gmail.com</p>
+                <p>Щоб проконсультуватися, обговорити ціни, зробити замовлення, Ви можете зв'язатися зі мною за телефоном
+                    або написати на пошту. Дзвінки приймаються будь-якого дня з 08:00 до 20:00.</p>
+                    <!-- 
                 <p>Если Вы не можете дозвониться, то перезвоните в другое время либо отправьте сообщение. Возможно
-                    телефон выключен, находится в режиме "без звука" или находится далеко от хозяина.</p>
+                    телефон выключен, находится в режиме "без звука" или находится далеко от хозяина.</p> -->
             </div>
         </section>
     </main>
@@ -197,9 +201,9 @@
                 </div>
                 <div class="col-sm-9">
                     <ul class="my-nav-b-footer">
-                        <li><a href="#about-me">О нас</a></li>
-                        <li><a href="#my-projects">Наши работы</a></li>
-                        <li><a href="#table-animation">3d-Стол - Анимация</a></li>
+                        <li><a href="#about-me">Про компанію</a></li>
+                        <li><a href="#my-projects">Наші работи</a></li>
+                        <li><a href="#table-animation">3d-Стіл - Анімація</a></li>
                     </ul>
                 </div>
             </div>
