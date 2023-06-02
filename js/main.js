@@ -90,9 +90,9 @@ $(document).ready(function () {
             console.log(data);
             var $messagesBlock = $("#messagesBlockWrapper");
             if($messagesBlock.is("#messagesBlockWrapper")) {
+                var $user = sessionStorage.getItem("userNameForKovka")
                 var $myDiv = $('<div>').attr({'class': 'messageItem'}).attr({'data-id':data.data.id});
                 $myDiv.html(`<span class="user">${$user}</span><p class="messageText">${$data.textOfMessage}</p>`)
-                var $user = sessionStorage.getItem("userNameForKovka")
                 if($user=="Admin") {
                     $myDiv.append("<div class='deleteMessageBlock'></div>")
                 }
