@@ -24,7 +24,11 @@ $(document).ready(function () {
                 sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 sessionStorage.setItem("userNameForKovka", $data.userName);
                 $("#authentication-page-error-block").html("<p></p>");
-                location.href = "authorizedUser.html";
+                if($data.userName == "Admin") {
+                    location.href = "authorizedAdminUser.html";
+                } else {
+                    location.href = "authorizedUser.html";
+                }
             }
         });
     });
@@ -53,7 +57,11 @@ $(document).ready(function () {
                 sessionStorage.setItem("bearerTokenForUser", `Bearer ${data.jwt}`);
                 sessionStorage.setItem("userNameForKovka", $data.userName);
                 $("#authentication-page-error-block").html("<p></p>");
-                location.href = "authorizedUser.html";
+                if($data.userName == "Admin") {
+                    location.href = "authorizedAdminUser.html";
+                } else {
+                    location.href = "authorizedUser.html";
+                }
             }
         });
     })

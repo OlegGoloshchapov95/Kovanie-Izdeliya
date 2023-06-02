@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    if(sessionStorage.getItem("bearerTokenForUser") && sessionStorage.getItem("userNameForKovka")) {
-        if(sessionStorage.getItem("userNameForKovka") == "Admin") {
-            location.href = "authorizedAdminUser.html";
-        } else {
-            location.href = "authorizedUser.html";
-        }
-    }
-</script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,8 +42,7 @@
                         <li><a href="#my-projects">Наші роботи</a></li>
                         <li><a href="#table-animation">3d-Стіл - Анімація</a></li>
                         <li><a href="#how-to-contact-me">Контакти</a></li>
-                        <li><a href="registration.html">Реєстрація</a></li>
-                        <li><a href="signIn.html">Вхід</a></li>
+                        <li><a href="index.html" id="logOut-button">Вихід</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +50,7 @@
     </header>
     <main class="main-block">
         <div class="container">
-            <h1 class="main-heading h-decoration">ХУДОЖНІЙ КОВАЛЬ № 1 В УКРАЇНІ</h1>
+            <h1 class="main-heading h-decoration">ХУДОЖНІЙ КОВАЛЬ № 1 В УКРАЇНІ( ADMIN )</h1>
             <div class="promotionBlock">
                 <span>Знижка 20% на будь-яке замовлення з каталогу!!! Акція завершується через: </span>
                 <span id="countdown"></span>
@@ -91,17 +81,24 @@
         <section id="comments" class="comments">
             <div class="container">
                 <h4 class="h-in-section h-decoration">Відгуки</h4>
-                <p>Щоб залишити відгук, зайдіть на сайт як зареєстрований користувач</p>
+                <form class="message-form" id="myMessageForm">
+                    <div class="form-item">
+                        <input type="text" id="textOfMessage" name="textOfMessage" placeholder="text of message">
+                    </div>
+                    <button class="submit-button" id="submit-button-message">
+                        Надіслати
+                    </button>
+                </form>
                 <div id="messagesBlockWrapper">
                 </div>
             </div>
         </section>
         <section id="my-projects" class="aur-works">
             <div class="container">
-                <h4 class="h-in-section h-decoration">Наші работи</h4>
+                <h4 class="h-in-section h-decoration">Наші роботи</h4>
                 <div class="gallary">
                     <section class="gallery-section">
-                        <h5>Кована бесідка, кована гойдалка</h5>
+                        <h5>Кована бесідка, кована гойдалка.</h5>
                         <a data-fancybox="gallery" href="gallary_img/projectsBig/besedka1.jpg"><img
                                 src="gallary_img/projectsSmall/besedka1small.jpg" width="150" height="100"
                                 alt="Беседка 1"/></a>
